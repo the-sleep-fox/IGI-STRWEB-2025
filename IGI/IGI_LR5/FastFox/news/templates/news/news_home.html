@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %} News on our site{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1> News on our site</h1>
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <h3> {{ el.title }} </h3>
+                <p> {{el.anons}} </p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
